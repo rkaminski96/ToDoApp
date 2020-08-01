@@ -2,11 +2,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Todo.Api.Extensions;
-using Todo.Api.Filters;
-using Todo.Api.Middleware;
+using TodoApp.Api.Extensions;
+using TodoApp.Api.Filters;
+using TodoApp.Api.Middleware;
 
-namespace Todo.Api
+namespace TodoApp.Api
 {
     public class Startup
     {

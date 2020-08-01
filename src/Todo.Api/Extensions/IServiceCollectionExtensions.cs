@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
-namespace Todo.Api.Extensions
+namespace TodoApp.Api.Extensions
 {
     public static class IServiceCollectionExtensions
     {

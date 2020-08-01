@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using Todo.Domain.Exceptions;
+using TodoApp.Domain.Exceptions;
 
-namespace Todo.Api.Controllers
+namespace TodoApp.Api.Controllers
 {
     [Route("api/todo")]
     public class TodoController : ControllerBase

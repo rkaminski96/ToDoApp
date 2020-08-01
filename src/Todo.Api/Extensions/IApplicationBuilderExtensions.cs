@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace Todo.Api.Extensions
+namespace TodoApp.Api.Extensions
 {
     public static class IApplicationBuilderExtensions
     {

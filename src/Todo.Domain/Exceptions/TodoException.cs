@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Todo.Domain.Exceptions
+namespace TodoApp.Domain.Exceptions
 {
     public class TodoException : Exception
     {

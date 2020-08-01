@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace Todo.Domain.Exceptions
+namespace TodoApp.Domain.Exceptions
 {
     public class ErrorCode
     {

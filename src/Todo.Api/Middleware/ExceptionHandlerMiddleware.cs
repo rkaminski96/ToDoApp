@@ -3,9 +3,9 @@ using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Threading.Tasks;
-using Todo.Domain.Exceptions;
+using TodoApp.Domain.Exceptions;
 
-namespace Todo.Api.Middleware
+namespace TodoApp.Api.Middleware
 {
     public class ExceptionHandlerMiddleware
     {
