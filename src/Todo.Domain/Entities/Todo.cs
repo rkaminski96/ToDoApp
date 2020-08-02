@@ -10,5 +10,6 @@ namespace TodoApp.Domain.Entities
         public string Description { get; protected set; }
         public DateTime CompletionDate { get; protected set; }
         public TodoStatus Status { get; protected set; }
+        public TodoPriority Priority { get; protected set; }
     }
 }
