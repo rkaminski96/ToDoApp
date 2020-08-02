@@ -8,6 +8,7 @@ using TodoApp.Api.Extensions;
 using TodoApp.Api.Filters;
 using TodoApp.Api.Middleware;
 using TodoApp.Infrastructure;
+using TodoApp.Infrastructure.Modules;
 
 namespace TodoApp.Api
 {
@@ -27,6 +28,9 @@ namespace TodoApp.Api
             services.AddControllers(x => 
                 x.Filters.Add(typeof(ModelStateFilter)));
             services.AddSwagger();
+            services.AddAutoMapper();
+            services.AddMediator();
+            services.AddRepositoriesModule();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

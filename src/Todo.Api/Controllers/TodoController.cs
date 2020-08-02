@@ -1,16 +1,25 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using TodoApp.Domain.Exceptions;
+using TodoApp.Application.Queries.Models;
 
 namespace TodoApp.Api.Controllers
 {
-    [Route("api/todo")]
+    [Route("api/todo/")]
     public class TodoController : ControllerBase
     {
-        [HttpGet]
-        public async Task<ActionResult> Test()
+        private readonly IMediator mediator;
+
+        public TodoController(IMediator mediator)
         {
-            throw new TodoException(ErrorCode.TestError, "Test error message");
+            this.mediator = mediator;
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get([FromRoute] int id)
+        {
+            var todoDto = await mediator.Send(new GetTodoQuery(id));
+            return Ok(todoDto);
         }
     }
 }

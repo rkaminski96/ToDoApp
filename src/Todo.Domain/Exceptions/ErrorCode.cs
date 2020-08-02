@@ -12,6 +12,7 @@ namespace TodoApp.Domain.Exceptions
             HttpStatusCode = httpStatusCode;
         }
 
-        public static ErrorCode TestError => new ErrorCode(nameof(TestError), HttpStatusCode.InternalServerError);
+        public static ErrorCode DatabaseSavingException => new ErrorCode(nameof(DatabaseSavingException), HttpStatusCode.InternalServerError);
+        public static ErrorCode TodoNotExists => new ErrorCode(nameof(TodoNotExists));
     }
 }
