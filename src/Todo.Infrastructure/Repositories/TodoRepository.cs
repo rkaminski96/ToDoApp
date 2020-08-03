@@ -20,6 +20,21 @@ namespace TodoApp.Infrastructure.Repositories
             return await context.Todos.FirstOrDefaultAsync(x => x.Id == id);
         }
 
+        public async Task AddAsync(Todo todo)
+        {
+            await context.AddAsync(todo);
+        }
+
+        public void Update(Todo todo)
+        {
+            context.Update(todo);
+        }
+
+        public void Delete(Todo todo)
+        {
+            context.Remove(todo);
+        }
+
         public async Task SaveChangesAsync()
         {
             if (await context.SaveChangesAsync() < 0)

@@ -16,9 +16,4 @@
     <ProjectReference Include="..\Todo.Domain\TodoApp.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Commands\Handlers\" />
-    <Folder Include="Commands\Models\" />
-  </ItemGroup>
-
 </Project>

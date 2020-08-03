@@ -26,8 +26,9 @@ namespace TodoApp.Application.Queries.Handlers
             var todo = await todoRepository.GetByIdAsync(request.Id);
             if (todo == null)
             {
-                throw new TodoException(ErrorCode.TodoNotExists);
+                throw new TodoException(ErrorCode.TodoNotExist);
             }
+
             var todoDto = mapper.Map<Todo, TodoDto>(todo);
 
             return todoDto;

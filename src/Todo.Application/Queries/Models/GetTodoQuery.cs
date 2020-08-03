@@ -10,6 +10,6 @@ namespace TodoApp.Application.Queries.Models
             Id = id;  
         }
 
-        public int Id { get; set; }
+        public int Id { get; protected set; }
     }
 }
