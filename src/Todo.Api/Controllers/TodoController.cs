@@ -7,7 +7,7 @@ using TodoApp.Application.Queries.Models;
 
 namespace TodoApp.Api.Controllers
 {
-    [Route("api/todo/")]
+    [Route("api/todos/")]
     public class TodoController : ControllerBase
     {
         private readonly IMediator mediator;
