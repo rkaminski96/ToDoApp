@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace Todo.Domain.Exceptions
+namespace TodoApp.Domain.Exceptions
 {
     public class ErrorCode
     {
@@ -12,6 +12,7 @@ namespace Todo.Domain.Exceptions
             HttpStatusCode = httpStatusCode;
         }
 
-        public static ErrorCode TestError => new ErrorCode(nameof(TestError), HttpStatusCode.InternalServerError);
+        public static ErrorCode DatabaseSavingException => new ErrorCode(nameof(DatabaseSavingException), HttpStatusCode.InternalServerError);
+        public static ErrorCode TodoNotExist => new ErrorCode(nameof(TodoNotExist));
     }
 }

@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Todo.Api.Filters
+namespace TodoApp.Api.Filters
 {
     public class ModelStateFilter : IActionFilter
     {
