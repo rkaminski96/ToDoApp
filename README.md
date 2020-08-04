@@ -5,6 +5,7 @@ Do uruchomienia wymagane jest środowisko Visual Studio 2019 (wykorzystano .NET 
 Po sklonowaniu projektu z repozytorium należy:
 * uruchomić plik TodoApp.sln,
 * zbudować solucję (ctrl + shift + b),
+* upewnić się, że projektem startowym jest TodoApp.Api,
 * uruchomić aplikację (ctrl + f5).
 
 Baza danych zostanie utworzona automatycznie, na podstawie znajdującej się w kodzie migracji.
