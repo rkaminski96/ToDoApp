@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TodoApp.Infrastructure.Migrations
 {
-    public partial class init : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,8 +13,8 @@ namespace TodoApp.Infrastructure.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
+                    Title = table.Column<string>(maxLength: 200, nullable: false),
+                    Description = table.Column<string>(maxLength: 1000, nullable: true),
                     CompletionDate = table.Column<DateTime>(nullable: false),
                     Status = table.Column<int>(nullable: false),
                     Priority = table.Column<int>(nullable: false)

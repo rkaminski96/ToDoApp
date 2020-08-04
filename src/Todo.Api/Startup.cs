@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using TodoApp.Api.Extensions;
 using TodoApp.Api.Filters;
 using TodoApp.Api.Middleware;
-using TodoApp.Infrastructure;
+using TodoApp.Infrastructure.Context;
 using TodoApp.Infrastructure.Modules;
 
 namespace TodoApp.Api

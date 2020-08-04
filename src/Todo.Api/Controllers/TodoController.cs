@@ -25,9 +25,9 @@ namespace TodoApp.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] GetTodosQuery getTodosQuery)
+        public async Task<IActionResult> GetAll([FromQuery] GetTodosQuery query)
         {
-            var todoListPreview = await mediator.Send(getTodosQuery);
+            var todoListPreview = await mediator.Send(query);
             
             Response.Headers.Add("X-Pagination",
                 JsonSerializer.Serialize(todoListPreview.PaginationMetadata));
