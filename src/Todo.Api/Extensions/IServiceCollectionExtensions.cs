@@ -2,7 +2,7 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using TodoApp.Application.Interfaces;
+using TodoApp.Application.Queries.Models;
 using TodoApp.Infrastructure.Profiles;
 
 namespace TodoApp.Api.Extensions
@@ -30,7 +30,7 @@ namespace TodoApp.Api.Extensions
 
         public static void AddMediator(this IServiceCollection services)
         {
-            services.AddMediatR(typeof(IQuery<>).Assembly);
+            services.AddMediatR(typeof(GetTodoQuery).Assembly);
         }
     }
 }

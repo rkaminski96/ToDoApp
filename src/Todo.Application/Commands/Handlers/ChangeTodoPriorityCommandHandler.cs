@@ -7,16 +7,16 @@ using TodoApp.Domain.Interfaces;
 
 namespace TodoApp.Application.Commands.Handlers
 {
-    public class UpdateTodoCommandHandler : IRequestHandler<UpdateTodoCommand, Unit>
+    public class ChangeTodoPriorityCommandHandler : IRequestHandler<ChangeTodoPriorityCommand, Unit>
     {
         private readonly ITodoRepository todoRepository;
 
-        public UpdateTodoCommandHandler(ITodoRepository todoRepository)
+        public ChangeTodoPriorityCommandHandler(ITodoRepository todoRepository)
         {
             this.todoRepository = todoRepository;
         }
 
-        public async Task<Unit> Handle(UpdateTodoCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(ChangeTodoPriorityCommand request, CancellationToken cancellationToken)
         {
             var todo = await todoRepository.GetByIdAsync(request.Id);
             if (todo == null)
@@ -24,9 +24,7 @@ namespace TodoApp.Application.Commands.Handlers
                 throw new TodoException(ErrorCode.TodoNotExist);
             }
 
-            todo.SetTitle(request.Title);
-            todo.SetDescription(request.Description);
-            todo.SetCompletionDate(request.CompletionDate);
+            todo.SetPriority(request.TodoPriority);
 
             todoRepository.Update(todo);
             await todoRepository.SaveChangesAsync();

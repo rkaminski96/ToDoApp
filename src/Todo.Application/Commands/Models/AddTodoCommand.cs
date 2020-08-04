@@ -1,10 +1,10 @@
-﻿using System;
-using TodoApp.Application.Interfaces;
+﻿using MediatR;
+using System;
 using TodoApp.Domain.Enums;
 
 namespace TodoApp.Application.Commands.Models
 {
-    public class AddTodoCommand : ICommand
+    public class AddTodoCommand : IRequest
     {
         public string Title { get; set; }
         public string Description { get; set; }

@@ -1,8 +1,8 @@
-﻿using TodoApp.Application.Interfaces;
+﻿using MediatR;
 
 namespace TodoApp.Application.Commands.Models
 {
-    public class DeleteTodoCommand : ICommand
+    public class DeleteTodoCommand : IRequest
     {
         public DeleteTodoCommand(int id)
         {

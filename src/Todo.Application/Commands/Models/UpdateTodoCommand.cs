@@ -1,9 +1,9 @@
-﻿using System;
-using TodoApp.Application.Interfaces;
+﻿using MediatR;
+using System;
 
 namespace TodoApp.Application.Commands.Models
 {
-    public class UpdateTodoCommand : ICommand
+    public class UpdateTodoCommand : IRequest
     {
         public int Id { get; protected set; }
         public string Title { get; set; }

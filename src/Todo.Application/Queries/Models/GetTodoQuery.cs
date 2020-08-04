@@ -1,9 +1,9 @@
-﻿using TodoApp.Application.Dtos;
-using TodoApp.Application.Interfaces;
+﻿using MediatR;
+using TodoApp.Application.Dtos;
 
 namespace TodoApp.Application.Queries.Models
 {
-    public class GetTodoQuery : IQuery<TodoDto>
+    public class GetTodoQuery : IRequest<TodoDto>
     {
         public GetTodoQuery(int id)
         {

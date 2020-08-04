@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Threading.Tasks;
 using TodoApp.Domain.Entities;
 using TodoApp.Domain.Exceptions;
@@ -18,6 +19,11 @@ namespace TodoApp.Infrastructure.Repositories
         public async Task<Todo> GetByIdAsync(int id)
         {
             return await context.Todos.FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public IQueryable<Todo> GetQueryable()
+        {
+            return context.Todos.AsQueryable();
         }
 
         public async Task AddAsync(Todo todo)

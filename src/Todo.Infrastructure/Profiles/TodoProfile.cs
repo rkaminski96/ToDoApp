@@ -9,6 +9,7 @@ namespace TodoApp.Infrastructure.Profiles
         public TodoProfile()
         {
             CreateMap<Todo, TodoDto>();
+            CreateMap<Todo, TodoPreviewDto>();
         }
     }
 }
